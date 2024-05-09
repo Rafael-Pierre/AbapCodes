@@ -1,0 +1,87 @@
+<core:FragmentDefinition
+    xmlns="sap.ui.comp.valuehelpdialog"
+    xmlns:m="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <ValueHelpDialog
+        id="_IDGenValueHelpDialog1"
+        title="Product"
+        ok=".onWhitespaceOkPress"
+        cancel=".onWhitespaceCancelPress"
+        supportRanges="false"
+        afterClose=".onAfterClose"
+        supportMultiselect="false"
+        key="Condicao_Frete"
+        descriptionKey="Text"
+    >
+        <filterBar>
+            <fb:FilterBar
+                id="_IDGenFilterBar1"
+                advancedMode="true"
+                search=".onFilterBarWhitespacesSearch"
+                isRunningInValueHelpDialog="true"
+            >
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem
+                        id="_IDGenFilterGroupItem1"
+                        groupName="__$INTERNAL$"
+                        name="Condicao_Frete"
+                        label="Condicao Frete"
+                        visibleInFilterBar="true"
+                    >
+                        <fb:control>
+                            <m:Input
+                                id="_IDGenInput1"
+                                name="Condicao_Frete"
+                                showSuggestion="true"
+                                showValueHelp="true"
+                                suggestionItems="{
+							   path: '/ZI_RPM_VH_FRETE',
+							   sorter: { path: 'Condicao_Frete'}
+						    }"
+                            >
+                                <core:Item
+                                    id="_IDGenItem1"
+                                    key="{Condicao_Frete}"
+                                    text="{
+									path: 'Condicao_Frete',
+									formatter : '.whitespace2Char'
+								}"
+                                />
+                            </m:Input>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+                        id="_IDGenFilterGroupItem2"
+                        groupName="__$INTERNAL$"
+                        name="ConditionName"
+                        label="Condicao"
+                        visibleInFilterBar="true"
+                    >
+                        <fb:control>
+                            <m:Input
+                                id="_IDGenInput2"
+                                name="Condicao_Frete"
+                                showSuggestion="true"
+                                showValueHelp="true"
+                                suggestionItems="{
+								path: '/ZI_RPM_VH_FRETE',
+								sorter: { path: 'Condicao_Frete' }
+							}"
+                            >
+                                <core:Item
+                                    id="_IDGenItem2"
+                                    key="{Condicao_Frete}"
+                                    text="{Condicao_Frete}"
+                                />
+                            </m:Input>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar>
+        </filterBar>
+    </ValueHelpDialog>
+</core:FragmentDefinition>

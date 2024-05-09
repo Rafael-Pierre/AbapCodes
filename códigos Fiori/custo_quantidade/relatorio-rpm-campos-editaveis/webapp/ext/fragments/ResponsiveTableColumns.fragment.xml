@@ -1,0 +1,139 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:vh="sap.ui.comp.valuehelpdialog"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <table:Column
+        id="_IDGenColumn4"
+        width="15rem"
+    >
+        <Label
+            id="_IDGenLabel4"
+            text="Quantidade"
+        />
+        <table:template>
+            <StepInput
+                id="quantidade"
+                value="{quantidade}"
+                min="0"
+                displayValuePrecision="3"
+                width="120px"
+                step="1.000"
+                largerStep="10.000"
+                description="{Unit}"
+                change="onQuantidade"
+            />
+        </table:template>
+        <table:customData>
+            <core:CustomData
+                key="p13nData"
+                value="\{&quot;columnKey&quot;: &quot;quantidade&quot;, &quot;columnIndex&quot;: &quot;18&quot;, &quot;leadingProperty&quot;: &quot;quantidade&quot;}"
+            />
+        </table:customData>
+    </table:Column>
+
+    
+    <table:Column
+        id="_IDGenColumn2"
+        width="15rem"
+    >
+        <Label
+            id="_IDGenLabel2"
+            text="Data validade preço planejado"
+        />
+        <table:template>
+            <DatePicker
+                id="endDate"
+                value="{Data_planejado}"
+                displayFormat="short"
+                required="true"
+                change="onDataPick"
+            />
+        </table:template>
+        <table:customData>
+            <core:CustomData
+                key="p13nData"
+                value="\{&quot;columnKey&quot;: &quot;Data_planejado&quot;, &quot;columnIndex&quot;: &quot;29&quot;, &quot;leadingProperty&quot;: &quot;Data_planejado&quot;}"
+            />
+        </table:customData>
+    </table:Column>
+    
+    
+    <table:Column
+        id="_IDGenColumn3"
+        width="15rem"
+    >
+        <Label
+            id="_IDGenLabel3"
+            text="Condição Frete"
+        />
+        <table:template>
+            <Input
+                id="whiteSpaces"
+                valueHelpRequest=".onWhitespaceVHRequested"
+                showValueHelp="true"
+                value="{Condicao_Frete}"
+                showSuggestion="true"
+                suggestionItems="{
+				path: '/ZI_RPM_VH_FRETE',
+				length: 40
+			}"
+            >
+                <suggestionItems>
+                    <core:ListItem
+                        id="_IDGenListItem1"
+                        key="{Condicao_Frete}"
+                        text="{
+						path : 'Condicao_Frete',
+						formatter : '.whitespace2Char'
+					}"
+                        additionalText="{
+						path : 'ConditionName',
+						formatter : '.whitespace2Char'
+					}"
+                    />
+                </suggestionItems>
+            </Input>
+        </table:template>
+        <table:customData>
+            <core:CustomData
+                key="p13nData"
+                value="\{&quot;columnKey&quot;: &quot;Condicao_Frete&quot;, &quot;columnIndex&quot;: &quot;27&quot;, &quot;leadingProperty&quot;: &quot;Condicao_Frete&quot;}"
+            />
+        </table:customData>
+    </table:Column>
+
+        <table:Column
+        id="_IDGenColumn27"
+        width="15rem"
+    >
+        <Label
+            id="_IDGenLabel27"
+            text="Montante"
+        />
+        <table:template>
+            <StepInput
+                id="montante"
+                value="{montante}"
+                min="0"
+                displayValuePrecision="3"
+                width="120px"
+                step="1.000"
+                largerStep="10.000"
+                description="{Unit}"
+                change="onMontante"
+            />
+        </table:template>
+        <table:customData>
+            <core:CustomData
+                key="p13nData"
+                value="\{&quot;columnKey&quot;: &quot;montante&quot;, &quot;columnIndex&quot;: &quot;28&quot;, &quot;leadingProperty&quot;: &quot;montante&quot;}"
+            />
+        </table:customData>
+    </table:Column>
+
+</core:FragmentDefinition>
